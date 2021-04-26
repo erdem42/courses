@@ -28,6 +28,36 @@ public class Main {
 
 		}
 		
+		String[] alanlar1= {"alan1","alan2"};
+		Category category1=new Category(1,"Kurslarým",alanlar1);
+		
+		String[] alanlar2= {"alan1","alan2"};
+		Category category2=new Category(2,"Tüm Kurslar",alanlar2);
+		
+		String[] alanlar3= {"alan1","alan2"};
+		Category category3=new Category(3,"SSS",alanlar3);
+		
+		Category[] categories= {
+				category1,
+				category2,
+				category3
+		};
+		
+		
+		CategoryManagement categoryManagement=new CategoryManagement();
+		
+		for (Category category : categories) {
+			System.out.println(category.id+" "+category.name+" "+category.alanlar[0]+" "+category.alanlar[1]);
+		
+			categoryManagement.goToCategory(category);
+			categoryManagement.deleteCategory(category);
+		
+		}
+		
+		
+		
+		
+		
 	}
 
 }
